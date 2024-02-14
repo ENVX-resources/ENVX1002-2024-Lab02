@@ -2,13 +2,13 @@
 
 ## ENVX1002
 
-### Tutorial 01
+### Lab 02
 
 Semester 1, 2024
 
 <!-- Use this badge if the draft is not ready. -->
 
-[![status - In Development](https://img.shields.io/badge/status-In_Development-critical?style=for-the-badge)](#)
+<!--[![status - In Development](https://img.shields.io/badge/status-In_Development-critical?style=for-the-badge)](#) -->
 
 <!-- Use this badge to let students know that the resource is ready. -->
 
