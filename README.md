@@ -14,8 +14,6 @@ Semester 1, 2024
 
 [![status - Ready](https://img.shields.io/badge/status-Ready-success?style=for-the-badge)](#)
 
-_(Pick one of the badges above and hide the other, and remove this comment.)_
-
 _To view the file, click on the link :link: on the **right side of the page** under the "About" section._
 
 **License and attribution**: This work was developed using resources that are available under a [Creative Commons Attribution 4.0 International license][cc-by], made available on the [SOLES Open Educational Resources repository][soles-oer] by The University of Sydney.
