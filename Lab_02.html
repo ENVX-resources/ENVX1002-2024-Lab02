@@ -282,7 +282,7 @@ Tip
 <ul>
 <li>We will start with further describing the <span class="math inline">\text{SO}_4</span> water quality data</li>
 <li>Remember the most common way to enter data into R is to import it from an external file. Like in the tutorial, in this example we will import the data found in the worksheet called <em>SO4</em> found in the ENVX1002_Data2.xlsx file that can be downloaded from the Tutorial and Computer Lab Page on Canvas.</li>
-<li>In R you can import the file as a data frame using the <code>read_excel</code> function from the <strong>readxl</strong> package. Note that you need to specify which worksheet you want to import. If you have not installed the readxl package you will need to run <code>install.packages("readxl")</code> but you need to only run this once. Hence, I often suggest to simply type this in the console window bottom left in R Studio and run it from there oryou can put a comment # in front after you have run the code once! Note that there are other commands, such as <code>read.csv</code> and <code>read.table</code>, that can be used to read in various files types!</li>
+<li>In R you can import the file as a data frame using the <code>read_excel</code> function from the <strong>readxl</strong> package. Note that you need to specify which worksheet you want to import. If you have not installed the readxl package you will need to run <code>install.packages("readxl")</code> but you need to only run this once. Hence, I often suggest to simply type this in the console window bottom left in R Studio and run it from there or you can put a comment # in front after you have run the code once! Note that there are other commands, such as <code>read.csv</code> and <code>read.table</code>, that can be used to read in various files types!</li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(readxl)</span></span>
@@ -345,7 +345,7 @@ Tip
 </section>
 <section id="describing-soil" class="level1">
 <h1>Describing Soil</h1>
-<p>Given a dataset, we need statistics and graphics to summarise it’s key features. The statistics and graphics we use depend on the type data, i.e.&nbsp;numerical or categorical. The example dataset we will use is from the catchment of Muttama creek which is located near Canberra. Further details about the catchment are given in Orton et al.&nbsp;(2016). 56 sites were sampled for soil to a depth varying between 1 and 2 m and various soil and site properties were measured.</p>
+<p>Given a data set, we need statistics and graphics to summarise it’s key features. The statistics and graphics we use depend on the type data, i.e.&nbsp;numerical or categorical. The example data set we will use is from the catchment of Muttama creek which is located near Canberra. Further details about the catchment are given in Orton et al.&nbsp;(2016). 56 sites were sampled for soil to a depth varying between 1 and 2 m and various soil and site properties were measured.</p>
 <p>Reference: Orton TG, Pringle MJ &amp; Bishop, TFA (2016). A one-step approach for modelling and mapping soil properties based on profile data sampled over varying depth intervals. Geoderma 262: 174-186.</p>
 <p>In this work we will focus on describing a subset of soil properties:</p>
 <ul>
