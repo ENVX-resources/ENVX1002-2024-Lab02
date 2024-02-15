@@ -36,7 +36,7 @@ The first step is to 1) create a new project folder for this weeks computer lab,
 
 - We will start with further describing the $\text{SO}_4$ water quality data 
 - Remember the most common way to enter data into R is to import it from an external file.  Like in the tutorial, in this example we will import the data found in the worksheet called *SO4* found in the ENVX1002_Data2.xlsx file that can be downloaded from the Tutorial and Computer Lab Page on Canvas. 
-- In R you can import the file as a data frame using the `read_excel` function from the **readxl** package. Note that you need to specify which worksheet you want to import. If you have not installed the readxl package you will need to run `install.packages("readxl")` but you need to only run this once. Hence, I often suggest to simply type this in the console window bottom left in R Studio and run it from there oryou can put a comment # in front after you have run the code once! Note that there are other commands, such as `read.csv` and `read.table`, that can be used to read in various files types!
+- In R you can import the file as a data frame using the `read_excel` function from the **readxl** package. Note that you need to specify which worksheet you want to import. If you have not installed the readxl package you will need to run `install.packages("readxl")` but you need to only run this once. Hence, I often suggest to simply type this in the console window bottom left in R Studio and run it from there or you can put a comment # in front after you have run the code once! Note that there are other commands, such as `read.csv` and `read.table`, that can be used to read in various files types!
 
 ```{r, warning=FALSE}
 # install.packages(readxl)
