@@ -1,56 +1,56 @@
 [
   {
-    "objectID": "Lab_02.html",
-    "href": "Lab_02.html",
+    "objectID": "ENVX1002-2024-Lab02.html",
+    "href": "ENVX1002-2024-Lab02.html",
     "title": "Lab 02",
     "section": "",
     "text": "This exercise encourages students to discuss academic integrity, and in particular the grey areas often present. Your demonstrator will provide you with a number of scenarios to discuss with each other in smaller groups, and then with the class.\nIf you are interested in more information on Academic Integrity at the University of Sydney, see the following link: Academic Integrity. Also ensure you have completed the Academic Honesty Education Module (AHEM). This must be complete before your first assessment is due (next week for ENVX1002).\n\n\n\n\n\n\nTip\n\n\n\nLearning Outcomes\nAt the end of this practical students should be able to:\n\nUse R to calculate simple summary statistics\nCreate basic plots using default R and ggplot\nDevelop your coding and Quarto skills\nDo basic data wrangling using dplyr\nProduce your own knitted Markdown document"
   },
   {
-    "objectID": "Lab_02.html#walk-through-exercise---ggplot",
-    "href": "Lab_02.html#walk-through-exercise---ggplot",
+    "objectID": "ENVX1002-2024-Lab02.html#walk-through-exercise---ggplot",
+    "href": "ENVX1002-2024-Lab02.html#walk-through-exercise---ggplot",
     "title": "Lab 02",
     "section": "Walk through Exercise - ggplot",
     "text": "Walk through Exercise - ggplot\nIn this case, the package called ggplot2 to make awesome looking plots, create 1) plot the raw data using a strip chart and 2) a jitter boxplot for the SO4 dataset from the tutorial. For each graphical summary you have used, describe what you see and relate that to the data i.e. is it symmetrical, what are the range of values and also comment on the advantages and disadvantages of each plot for describing the SO4 dataset?\n\nStrip chart\n\n\n# install.packages(ggplot2)\nlibrary(ggplot2)\np &lt;- ggplot(water, aes(y=SO4, x=\"\")) +\n  geom_jitter(position=position_jitter(0))\np\n\n\n\n\n\n\n\n\n\nBoxplot with jittered points - the following is how to create a boxplot with the data points jittered\n\n\np &lt;- ggplot(water, aes(y=SO4, x=\"\")) +\n  geom_boxplot() + \n  geom_jitter(position=position_jitter(0.1))\np\n\n\n\n\n\n\n\n\nCheck out the cheat sheets here https://www.rstudio.com/resources/cheatsheets/ for more on making plots as well as manipulating data in R!"
   },
   {
-    "objectID": "Lab_02.html#walk-through-exercise---skewness",
-    "href": "Lab_02.html#walk-through-exercise---skewness",
+    "objectID": "ENVX1002-2024-Lab02.html#walk-through-exercise---skewness",
+    "href": "ENVX1002-2024-Lab02.html#walk-through-exercise---skewness",
     "title": "Lab 02",
     "section": "Walk through Exercise - skewness",
     "text": "Walk through Exercise - skewness\nIn this case, the package called moments contains a function for calculating skew, called skewness. The skewness (g_1) of a dataset gives an indication of its symmetry. The sign of the skewness tells us whether the data is positively or negatively skewed. It is useful as one source of evidence for determining whether the data has a symmetrical distribution, particularly when having to assess this for many variables at once. First we must install the package using the install.packages function and the load it using the library function. Note that I have put a comment # in front as I have already installed the package and you only need to install a package once!\n\n#install.packages(\"moments\")\nlibrary(moments)\n\nNow we can calculate the skewness of sulphate.\n\nskewness(water$SO4)\n\n[1] 0.1571807"
   },
   {
-    "objectID": "Lab_02.html#exercise-1",
-    "href": "Lab_02.html#exercise-1",
+    "objectID": "ENVX1002-2024-Lab02.html#exercise-1",
+    "href": "ENVX1002-2024-Lab02.html#exercise-1",
     "title": "Lab 02",
     "section": "Exercise 1",
     "text": "Exercise 1\nLithology\nWhat is the most commonly sampled lithology?"
   },
   {
-    "objectID": "Lab_02.html#exercise-2",
-    "href": "Lab_02.html#exercise-2",
+    "objectID": "ENVX1002-2024-Lab02.html#exercise-2",
+    "href": "ENVX1002-2024-Lab02.html#exercise-2",
     "title": "Lab 02",
     "section": "Exercise 2",
     "text": "Exercise 2\nFor each of the clay and EC properties (at all depths), give the most appropriate estimate of centre and variation. Are there any unusual observations? Justify your answers."
   },
   {
-    "objectID": "Lab_02.html#exercise-3",
-    "href": "Lab_02.html#exercise-3",
+    "objectID": "ENVX1002-2024-Lab02.html#exercise-3",
+    "href": "ENVX1002-2024-Lab02.html#exercise-3",
     "title": "Lab 02",
     "section": "Exercise 3",
     "text": "Exercise 3\nIs clay content more variable in the 0-30cm layer or in the 30-60cm layer? For the 0-30cm layer is clay or EC the most variable property. Justify your answers."
   },
   {
-    "objectID": "Lab_02.html#exercise-4",
-    "href": "Lab_02.html#exercise-4",
+    "objectID": "ENVX1002-2024-Lab02.html#exercise-4",
+    "href": "ENVX1002-2024-Lab02.html#exercise-4",
     "title": "Lab 02",
     "section": "Exercise 4",
     "text": "Exercise 4\nUsing an appropriate measure of centre, which land use has the largest EC and clay content for each depth layer?"
   },
   {
-    "objectID": "Lab_02.html#exercise-5",
-    "href": "Lab_02.html#exercise-5",
+    "objectID": "ENVX1002-2024-Lab02.html#exercise-5",
+    "href": "ENVX1002-2024-Lab02.html#exercise-5",
     "title": "Lab 02",
     "section": "Exercise 5",
     "text": "Exercise 5\nCreate boxplots of clay 0-30cm and clay 30-60cm for the different lithological classes. Are there any differences between the lithological classes based on the boxplots.\nThis is the end of the R component of the practical. Remember to save your files so you can access in the future."
