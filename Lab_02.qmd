@@ -86,7 +86,7 @@ skewness(water$SO4)
 
 # Describing Soil
 
-Given a dataset, we need statistics and graphics to summarise it’s key features.  The statistics and graphics we use depend on the type data, i.e. numerical or categorical.  The example dataset we will use is from the catchment of Muttama creek which is located near Canberra.  Further details about the catchment are given in Orton et al. (2016).  56 sites were sampled for soil to a depth varying between 1 and 2 m and various soil and site properties were measured.  
+Given a data set, we need statistics and graphics to summarise it’s key features.  The statistics and graphics we use depend on the type data, i.e. numerical or categorical.  The example data set we will use is from the catchment of Muttama creek which is located near Canberra.  Further details about the catchment are given in Orton et al. (2016).  56 sites were sampled for soil to a depth varying between 1 and 2 m and various soil and site properties were measured.  
 
 Reference:  Orton TG, Pringle MJ & Bishop, TFA (2016). A one-step approach for modelling and mapping soil properties based on profile data sampled over varying depth intervals. Geoderma 262: 174-186.
 
