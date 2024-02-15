@@ -204,19 +204,18 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#transition-exercises" id="toc-transition-exercises" class="nav-link active" data-scroll-target="#transition-exercises">Transition Exercises</a></li>
-  <li><a href="#computer-lab" id="toc-computer-lab" class="nav-link" data-scroll-target="#computer-lab">Computer lab</a>
-  <ul class="collapse">
-  <li><a href="#setting-up-project" id="toc-setting-up-project" class="nav-link" data-scroll-target="#setting-up-project">Setting up project</a></li>
+  <li><a href="#academic-integrity" id="toc-academic-integrity" class="nav-link active" data-scroll-target="#academic-integrity">Academic integrity</a></li>
+  <li><a href="#computer-lab" id="toc-computer-lab" class="nav-link" data-scroll-target="#computer-lab">Computer lab</a></li>
+  <li><a href="#setting-up-your-project" id="toc-setting-up-your-project" class="nav-link" data-scroll-target="#setting-up-your-project">Setting up your project</a></li>
   <li><a href="#plotting-the-tutorial-water-quality-data---continued" id="toc-plotting-the-tutorial-water-quality-data---continued" class="nav-link" data-scroll-target="#plotting-the-tutorial-water-quality-data---continued">Plotting the tutorial water Quality Data - continued</a>
   <ul class="collapse">
   <li><a href="#walk-through-exercise---ggplot" id="toc-walk-through-exercise---ggplot" class="nav-link" data-scroll-target="#walk-through-exercise---ggplot">Walk through Exercise - ggplot</a></li>
   <li><a href="#walk-through-exercise---skewness" id="toc-walk-through-exercise---skewness" class="nav-link" data-scroll-target="#walk-through-exercise---skewness">Walk through Exercise - skewness</a></li>
   </ul></li>
-  <li><a href="#now-its-your-turn-describing-a-soil-dataset" id="toc-now-its-your-turn-describing-a-soil-dataset" class="nav-link" data-scroll-target="#now-its-your-turn-describing-a-soil-dataset">Now it’s your turn Describing a soil dataset</a></li>
+  <li><a href="#describing-soil" id="toc-describing-soil" class="nav-link" data-scroll-target="#describing-soil">Describing Soil</a></li>
   <li><a href="#categorical-data" id="toc-categorical-data" class="nav-link" data-scroll-target="#categorical-data">Categorical data</a>
   <ul class="collapse">
-  <li><a href="#exercise-1---lithology" id="toc-exercise-1---lithology" class="nav-link" data-scroll-target="#exercise-1---lithology">Exercise 1 - Lithology</a></li>
+  <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1">Exercise 1</a></li>
   </ul></li>
   <li><a href="#numerical-data" id="toc-numerical-data" class="nav-link" data-scroll-target="#numerical-data">Numerical data</a>
   <ul class="collapse">
@@ -229,7 +228,6 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#exercise-4" id="toc-exercise-4" class="nav-link" data-scroll-target="#exercise-4">Exercise 4</a></li>
   <li><a href="#exercise-5" id="toc-exercise-5" class="nav-link" data-scroll-target="#exercise-5">Exercise 5</a></li>
-  </ul></li>
   </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Lab_02.pdf"><i class="bi bi-file-pdf"></i>PDF (soles-assignment)</a></li></ul></div></nav>
@@ -245,29 +243,55 @@ window.Quarto = {
 
 
 
-<section id="transition-exercises" class="level1">
-<h1>Transition Exercises</h1>
+<section id="academic-integrity" class="level1">
+<h1>Academic integrity</h1>
+<p>This exercise encourages students to discuss academic integrity, and in particular the grey areas often present. Your demonstrator will provide you with a number of scenarios to discuss with each other in smaller groups, and then with the class.</p>
+<p>If you are interested in more information on Academic Integrity at the University of Sydney, see the following link: <a href="https://www.sydney.edu.au/students/academic-integrity.html">Academic Integrity</a>. Also ensure you have completed the Academic Honesty Education Module (AHEM). This must be complete before your first assessment is due (next week for ENVX1002).</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Learning Outcomes</strong></p>
+<p>At the end of this practical students should be able to:</p>
+<ul>
+<li>Use R to calculate simple summary statistics</li>
+<li>Create basic plots using default R and ggplot</li>
+<li>Develop your coding and Quarto skills</li>
+<li>Do basic data wrangling using dplyr</li>
+<li>Produce your own knitted Markdown document</li>
+</ul>
+</div>
+</div>
 </section>
 <section id="computer-lab" class="level1">
 <h1>Computer lab</h1>
-<p>We are going to be working through a series of tasks and also complete some exercises indicated by <strong>Exercise</strong>. The best way to do this is to create an Quarto document and work through the tasks and complete the exercises. Each time document your answers/notes so that when you revisit the prac during your study for the mid-semester test and final exam, that it is clear what you have done and what the meaning of the output is.</p>
-<section id="setting-up-project" class="level2">
-<h2 class="anchored" data-anchor-id="setting-up-project">Setting up project</h2>
-<p>The first step is to 1) create a new project folder for this weeks computer lab <strong>OR</strong> use the folder you set up for the week2 Tutorial. If you haven’t already done so move the data file <strong>ENVX1002_Data2.xlsx</strong> into your project folder.</p>
+<p>We are going to be working through a series of tasks and also complete some exercises indicated by <strong>Exercise</strong>. The best way to do this is to create a project for this week, open a <em>Quarto</em> document and work through the tasks and complete the exercises. Each time document your answers/notes so that when you revisit the prac during your study for the mid-semester skills based assessment and final exam. You should have a good understanding of the code, the analysis, and what the meaning of the output is.</p>
 </section>
-<section id="plotting-the-tutorial-water-quality-data---continued" class="level2">
-<h2 class="anchored" data-anchor-id="plotting-the-tutorial-water-quality-data---continued">Plotting the tutorial water Quality Data - continued</h2>
-<p>We will start with further describing the <span class="math inline">\text{SO}_4</span> water quality data</p>
-<p>Remember the most common way to enter data into R is to import it from an external file. Like in the tutorial, in this example we will import the data found in the worksheet called <em>SO4</em> found in the ENVX1002_Data2.xlsx file that can be downloaded from the Tutorial and Computer Lab Page on Canvas.</p>
-<p>In R you can import the file as a data frame using the <code>read_excel</code> function from the <strong>readxl</strong> package. Note that you need to specify which worksheet you want to import. If you have not installed the readxl package you will need to run <code>install.packages("readxl")</code> but you need to only run this once. Hence, I often suggest to simply type this in the console window bottom left in R Studio and run it from there oryou can put a comment # in front after you have run the code once! Note that there are other commands, such as <code>read.csv</code> and <code>read.table</code>, that can be used to read in various files types!</p>
+<section id="setting-up-your-project" class="level1">
+<h1>Setting up your project</h1>
+<p>The first step is to 1) create a new project folder for this weeks computer lab, 2) Move the data file <strong>ENVX1002_Data2.xlsx</strong> into your project folder, 3) start a new Quarto Document.</p>
+</section>
+<section id="plotting-the-tutorial-water-quality-data---continued" class="level1">
+<h1>Plotting the tutorial water Quality Data - continued</h1>
+<ul>
+<li>We will start with further describing the <span class="math inline">\text{SO}_4</span> water quality data</li>
+<li>Remember the most common way to enter data into R is to import it from an external file. Like in the tutorial, in this example we will import the data found in the worksheet called <em>SO4</em> found in the ENVX1002_Data2.xlsx file that can be downloaded from the Tutorial and Computer Lab Page on Canvas.</li>
+<li>In R you can import the file as a data frame using the <code>read_excel</code> function from the <strong>readxl</strong> package. Note that you need to specify which worksheet you want to import. If you have not installed the readxl package you will need to run <code>install.packages("readxl")</code> but you need to only run this once. Hence, I often suggest to simply type this in the console window bottom left in R Studio and run it from there oryou can put a comment # in front after you have run the code once! Note that there are other commands, such as <code>read.csv</code> and <code>read.table</code>, that can be used to read in various files types!</li>
+</ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(readxl)</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>water<span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">"ENVX1002_Data2.xlsx"</span>, <span class="at">sheet =</span> <span class="st">"SO4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="walk-through-exercise---ggplot" class="level3">
-<h3 class="anchored" data-anchor-id="walk-through-exercise---ggplot">Walk through Exercise - ggplot</h3>
-<p>In this case, the package called <code>ggplot2</code> to make awesome looking plots, create 1) plot the raw data using a strip chart and 2) a jitter boxplot for the <code>SO4</code> dataset from the tutorial. For each graphical summary you have used, describe what you see and relate that to the data i.e.&nbsp;is it symmetrical, whatare the range of values and also comment on the advantages and disadvantages of each plot for describing the <code>SO4</code> dataset?</p>
+<section id="walk-through-exercise---ggplot" class="level2">
+<h2 class="anchored" data-anchor-id="walk-through-exercise---ggplot">Walk through Exercise - ggplot</h2>
+<p>In this case, the package called <code>ggplot2</code> to make awesome looking plots, create 1) plot the raw data using a strip chart and 2) a jitter boxplot for the <code>SO4</code> dataset from the tutorial. For each graphical summary you have used, describe what you see and relate that to the data i.e.&nbsp;is it symmetrical, what are the range of values and also comment on the advantages and disadvantages of each plot for describing the <code>SO4</code> dataset?</p>
 <ol type="1">
 <li>Strip chart</li>
 </ol>
@@ -303,8 +327,8 @@ window.Quarto = {
 </div>
 <p>Check out the cheat sheets here https://www.rstudio.com/resources/cheatsheets/ for more on making plots as well as manipulating data in R!</p>
 </section>
-<section id="walk-through-exercise---skewness" class="level3">
-<h3 class="anchored" data-anchor-id="walk-through-exercise---skewness">Walk through Exercise - skewness</h3>
+<section id="walk-through-exercise---skewness" class="level2">
+<h2 class="anchored" data-anchor-id="walk-through-exercise---skewness">Walk through Exercise - skewness</h2>
 <p>In this case, the package called <code>moments</code> contains a function for calculating skew, called <code>skewness</code>. The skewness (<span class="math inline">g_1</span>) of a dataset gives an indication of its symmetry. The sign of the skewness tells us whether the data is positively or negatively skewed. It is useful as one source of evidence for determining whether the data has a symmetrical distribution, particularly when having to assess this for many variables at once. First we must install the package using the <code>install.packages</code> function and the load it using the <code>library</code> function. Note that I have put a comment # in front as I have already installed the package and you <strong>only need to install a package once</strong>!</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("moments")</span></span>
@@ -319,22 +343,22 @@ window.Quarto = {
 </div>
 </section>
 </section>
-<section id="now-its-your-turn-describing-a-soil-dataset" class="level2">
-<h2 class="anchored" data-anchor-id="now-its-your-turn-describing-a-soil-dataset">Now it’s your turn Describing a soil dataset</h2>
-<p>Given a dataset we need statistics and graphics to summarise it’s key features. The statistics and graphics we use depend on the type data, i.e.&nbsp;numerical or categorical. The example dataset we will use is from the catchment of Muttama creek which is located near Canberra. Further details about the catchment are given in Orton et al.&nbsp;(2016). 56 sites were sampled for soil to a depth varying between 1 and 2 m and various soil and site properties were measured.</p>
+<section id="describing-soil" class="level1">
+<h1>Describing Soil</h1>
+<p>Given a dataset, we need statistics and graphics to summarise it’s key features. The statistics and graphics we use depend on the type data, i.e.&nbsp;numerical or categorical. The example dataset we will use is from the catchment of Muttama creek which is located near Canberra. Further details about the catchment are given in Orton et al.&nbsp;(2016). 56 sites were sampled for soil to a depth varying between 1 and 2 m and various soil and site properties were measured.</p>
 <p>Reference: Orton TG, Pringle MJ &amp; Bishop, TFA (2016). A one-step approach for modelling and mapping soil properties based on profile data sampled over varying depth intervals. Geoderma 262: 174-186.</p>
 <p>In this work we will focus on describing a subset of soil properties:</p>
 <ul>
-<li><p><code>clay0</code> which is the clay (%) for the 0-30cm depth layer;</p></li>
-<li><p><code>clay60</code> which is the clay (%) for the 60-90cm depth layer;</p></li>
-<li><p><code>ec0</code> which is the electrical conductivity (EC) (<span class="math inline">\mu</span>S/cm) for the 0-30cm depth layer;</p></li>
-<li><p><code>ec60</code> which is the electrical conductivity (EC) (<span class="math inline">\mu</span>S/cm) for the 60-90cm depth layer.</p></li>
+<li><code>clay0</code> which is the clay (%) for the 0-30cm depth layer;</li>
+<li><code>clay60</code> which is the clay (%) for the 60-90cm depth layer;</li>
+<li><code>ec0</code> which is the electrical conductivity (EC) (<span class="math inline">\mu</span>S/cm) for the 0-30cm depth layer;</li>
+<li><code>ec60</code> which is the electrical conductivity (EC) (<span class="math inline">\mu</span>S/cm) for the 60-90cm depth layer.</li>
 </ul>
 <p>The clay content of a soil determines the nutrients and water it can hold, while EC is a measure of the salt in the soil which if too high limits plant growth. We wish to describe these data in terms of:</p>
 <ul>
-<li><p>typical values, their variability and identify unusual observations;</p></li>
-<li><p>differences between different depths;</p></li>
-<li><p>differences between the 2 soil properties; clay and EC.</p></li>
+<li>typical values, their variability and identify unusual observations;</li>
+<li>differences between different depths;</li>
+<li>differences between the 2 soil properties; clay and EC.</li>
 </ul>
 <p>We are also interested in describing the dataset in terms of the lithology and land use found at each of the sites.</p>
 <p>The data is in the worksheet called <em>soil</em> found in the ENVX1002_Data2.xlsx file that can be found in the Tutorial and Computer lab page in Canvas. Download the file and save into your data folder in your project folder and then load the dataset into R. Remember you need to have installed and loaded the <strong>readxl</strong> package to do this which we did earlier</p>
@@ -342,8 +366,8 @@ window.Quarto = {
 
 </div>
 </section>
-<section id="categorical-data" class="level2">
-<h2 class="anchored" data-anchor-id="categorical-data">Categorical data</h2>
+<section id="categorical-data" class="level1">
+<h1>Categorical data</h1>
 <p>A common way to describe categorical data is to create a frequency table which presents the number of observations belonging to each class.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(soil<span class="sc">$</span>land_use)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -365,13 +389,14 @@ Cropping  Grazing  Natural
 </div>
 </div>
 </div>
-<section id="exercise-1---lithology" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-1---lithology">Exercise 1 - Lithology</h3>
+<section id="exercise-1" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-1">Exercise 1</h2>
+<p><strong>Lithology</strong></p>
 <p>What is the most commonly sampled lithology?</p>
 </section>
 </section>
-<section id="numerical-data" class="level2">
-<h2 class="anchored" data-anchor-id="numerical-data">Numerical data</h2>
+<section id="numerical-data" class="level1">
+<h1>Numerical data</h1>
 <p>In this case we have 4 properties of interest, clay and EC at 2 different depths. Rather than calculating statistics on each variable separately you can in <strong>some cases</strong> apply the function to multiple columns in a data frame. In our case the columns of interest are the 2nd to 5th in the <code>soil</code> data frame and we can apply the <code>summary</code> function to all at once.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(soil[,<span class="dv">2</span><span class="sc">:</span><span class="dv">5</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -386,17 +411,17 @@ Cropping  Grazing  Natural
                  NA's   :1                        NA's   :1       </code></pre>
 </div>
 </div>
-<section id="exercise-2" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-2">Exercise 2</h3>
+<section id="exercise-2" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-2">Exercise 2</h2>
 <p>For each of the clay and EC properties (at all depths), give the most appropriate estimate of centre and variation. Are there any unusual observations? Justify your answers.</p>
 </section>
-<section id="exercise-3" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-3">Exercise 3</h3>
+<section id="exercise-3" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-3">Exercise 3</h2>
 <p>Is clay content more variable in the 0-30cm layer or in the 30-60cm layer? For the 0-30cm layer is clay or EC the most variable property. Justify your answers.</p>
 </section>
 </section>
-<section id="comparing-between-groups." class="level2">
-<h2 class="anchored" data-anchor-id="comparing-between-groups.">Comparing between groups.</h2>
+<section id="comparing-between-groups." class="level1">
+<h1>Comparing between groups.</h1>
 <p>Of interest to researchers is to assess the differences in a variable between groupings of data, e.g.&nbsp;weight change for different diets. In this analysis we wish to describe the difference in clay and EC between the land use or lithology classes. This will lead to more formal hypothesis testing in the later topics in ENVX1002. See https://en.wikipedia.org/wiki/Lithology for more information on Lithiology.</p>
 <p>This is where the <code>tapply</code> function is useful. Note we can use the <code>$</code> followed by the column name to select the column as opposed to</p>
 <div class="cell">
@@ -408,9 +433,9 @@ Cropping  Grazing  Natural
 </div>
 <p>The general structure of the <code>tapply</code> function is 3 arguments which are described below based on the code above:</p>
 <ul>
-<li><p>the response variable on which we wish to apply the function, clay 0, <code>soil$clay0</code>;</p></li>
-<li><p>the categorical variable which indicates the groups we wish to separately apply the function to, land use, <code>soil$land_use</code>;</p></li>
-<li><p>the function we are using, <code>mean</code>.</p></li>
+<li>the response variable on which we wish to apply the function, clay 0, <code>soil$clay0</code>;</li>
+<li>the categorical variable which indicates the groups we wish to separately apply the function to, land use, <code>soil$land_use</code>;</li>
+<li>the function we are using, <code>mean</code>.</li>
 </ul>
 <p>We can use the <code>tapply</code> function for other statistics, for example the variance of each group is also important.</p>
 <div class="cell">
@@ -421,8 +446,8 @@ Cropping  Grazing  Natural
 </div>
 </div>
 </section>
-<section id="using-dplyr" class="level2">
-<h2 class="anchored" data-anchor-id="using-dplyr">Using dplyr</h2>
+<section id="using-dplyr" class="level1">
+<h1>Using dplyr</h1>
 <p>This is a little more fancy! We can also use a package called dplyr to apply functions to different groupings of data. See https://rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf for all the operations you can do. Note you will have to install the <strong>dplyr</strong> package first and then load it into R Studio.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -453,8 +478,8 @@ Attaching package: 'dplyr'</code></pre>
 </div>
 </div>
 </section>
-<section id="boxplot-for-different-groupings" class="level2">
-<h2 class="anchored" data-anchor-id="boxplot-for-different-groupings">Boxplot for different groupings</h2>
+<section id="boxplot-for-different-groupings" class="level1">
+<h1>Boxplot for different groupings</h1>
 <p>We can also generate graphics for properties for different groupings. In the example below we create boxplots for each land use class. Take note of the general structure of the arguments for the <code>boxplot</code> function in this case as they used for many functions in R.</p>
 <p>First we specify the response, <code>clay0</code>, next is the tilde, <code>~</code> which means a funcion of, then we have the predictor, <code>land_use</code>, and finally we specify the <code>data.frame</code> with the <code>data=</code> argument. Using the <code>data=</code> argument enables us to specify column names only rather than their location within the data frame, e.g.&nbsp;soil[,2], soil$clay0.</p>
 <div class="cell">
@@ -485,17 +510,16 @@ Attaching package: 'dplyr'</code></pre>
 </div>
 </div>
 </div>
-<section id="exercise-4" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-4">Exercise 4</h3>
-<p>Using an appropriate measure of centre which land use has the largest EC and clay for each depth layer?</p>
+<section id="exercise-4" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-4">Exercise 4</h2>
+<p>Using an appropriate measure of centre, which land use has the largest EC and clay content for each depth layer?</p>
 </section>
-<section id="exercise-5" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-5">Exercise 5</h3>
+<section id="exercise-5" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-5">Exercise 5</h2>
 <p>Create boxplots of clay 0-30cm and clay 30-60cm for the different lithological classes. Are there any differences between the lithological classes based on the boxplots.</p>
-<p><strong>This is the end of the R component of the practical. Remember to save your quarto file so you can access it in the future.</strong></p>
+<p><strong>This is the end of the R component of the practical. Remember to save your files so you can access in the future.</strong></p>
 
 
-</section>
 </section>
 </section>
 
