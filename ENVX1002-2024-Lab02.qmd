@@ -30,7 +30,7 @@ We are going to be working through a series of tasks and also complete some exer
 
 # Setting up your project 
 
-The first step is to 1) create a new project folder for this weeks computer lab, 2) Move the data file **ENVX1002_Data2.xlsx** into your project folder, 3) start a new Quarto Document.
+The first step is to 1) create a new project folder for this weeks computer lab, 2) Move the data file **ENVX1002_Data2.xlsx** into to a folder called **data** in your project folder, 3) start a new Quarto Document.
 
 # Plotting the tutorial water Quality Data - continued
 
@@ -41,7 +41,7 @@ The first step is to 1) create a new project folder for this weeks computer lab,
 ```{r, warning=FALSE}
 # install.packages(readxl)
 library(readxl)
-water<-read_excel("ENVX1002_Data2.xlsx", sheet = "SO4")
+water<-read_excel("data/ENVX1002_Data2.xlsx", sheet = "SO4")
 ```
 
 ## Walk through Exercise - ggplot
@@ -108,7 +108,7 @@ We are also interested in describing the dataset in terms of the lithology and l
 The data is in the worksheet called *soil* found in the ENVX1002_Data2.xlsx file that can be found in the Tutorial and Computer lab page in Canvas.  Download the file and save into your data folder in your project folder and then load the dataset into R. Remember you need to have installed and loaded the **readxl** package to do this which we did earlier
 
 ```{r, echo=FALSE}
-soil<-read_excel("ENVX1002_Data2.xlsx", sheet = "soil")
+soil<-read_excel("data/ENVX1002_Data2.xlsx", sheet = "soil")
 ```
 
 # Categorical data
