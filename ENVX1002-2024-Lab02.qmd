@@ -46,7 +46,7 @@ water<-read_excel("data/ENVX1002_Data2.xlsx", sheet = "SO4")
 
 ## Walk through Exercise - ggplot
 
-In this case, the package called `ggplot2` to make awesome looking plots, create 1) plot the raw data using a strip chart and 2) a jitter boxplot for the `SO4` dataset from the tutorial. For each graphical summary you have used, describe what you see and relate that to the data i.e. is it symmetrical, what are the range of values and also comment on the advantages and disadvantages of each plot for describing the `SO4` dataset?
+In this case, the package called `ggplot2` to make awesome looking plots, create 1) plot the raw data using a strip chart and 2) a jitter boxplot for the `SO4` data set from the tutorial. For each graphical summary you have used, describe what you see and relate that to the data i.e. is it symmetrical, what are the range of values and also comment on the advantages and disadvantages of each plot for describing the `SO4` data set?
 
 1) Strip chart
 
@@ -71,7 +71,7 @@ Check out the cheat sheets here https://www.rstudio.com/resources/cheatsheets/ f
 
 ## Walk through Exercise - skewness
 
-In this case, the package called `moments` contains a function for calculating skew, called `skewness`.  The skewness ($g_1$) of a dataset gives an indication of its symmetry.   The sign of the skewness tells us whether the data is positively or negatively skewed.  It is useful as one source of evidence for determining whether the data has a symmetrical distribution, particularly when having to assess this for many variables at once.  First we must install the package using the `install.packages` function and the load it using the `library` function. Note that I have put a comment # in front as I have already installed the package and you **only need to install a package once**!
+In this case, the package called `moments` contains a function for calculating skew, called `skewness`.  The skewness ($g_1$) of a data set gives an indication of its symmetry.   The sign of the skewness tells us whether the data is positively or negatively skewed.  It is useful as one source of evidence for determining whether the data has a symmetrical distribution, particularly when having to assess this for many variables at once.  First we must install the package using the `install.packages` function and the load it using the `library` function. Note that I have put a comment # in front as I have already installed the package and you **only need to install a package once**!
 
 ```{r,warning=FALSE}
 #install.packages("moments")
@@ -103,9 +103,9 @@ The clay content of a soil determines the nutrients and water it can hold, while
 - differences between different depths;
 - differences between the 2 soil properties; clay and EC.
 
-We are also interested in describing the dataset in terms of the lithology and land use found at each of the sites.
+We are also interested in describing the data set in terms of the lithology and land use found at each of the sites.
 
-The data is in the worksheet called *soil* found in the ENVX1002_Data2.xlsx file that can be found in the Tutorial and Computer lab page in Canvas.  Download the file and save into your data folder in your project folder and then load the dataset into R. Remember you need to have installed and loaded the **readxl** package to do this which we did earlier
+The data is in the worksheet called *soil* found in the ENVX1002_Data2.xlsx file that can be found in the Tutorial and Computer lab page in Canvas.  Download the file and save into your data folder in your project folder and then load the data set into R. Remember you need to have installed and loaded the **readxl** package to do this which we did earlier
 
 ```{r, echo=FALSE}
 soil<-read_excel("data/ENVX1002_Data2.xlsx", sheet = "soil")
