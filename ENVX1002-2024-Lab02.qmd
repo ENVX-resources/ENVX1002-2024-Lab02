@@ -26,16 +26,28 @@ At the end of this practical students should be able to:
 
 # Computer lab
 
-We are going to be working through a series of tasks and also complete some exercises indicated by **Exercise**. The best way to do this is to create a project for this week, open a *Quarto* document and work through the tasks and complete the exercises. Each time document your answers/notes so that when you revisit the prac during your study for the mid-semester skills based assessment and final exam. You should have a good understanding of the code, the analysis, and what the meaning of the output is.
+We are going to be working through a series of tasks and also complete some exercises indicated by **Exercise**. The best way to do this is to create a project for this week in your ENVX1002 folder, open a *Quarto* document and work through the tasks and complete the exercises. 
+Make sure you document your answers and make notes so that it will be easy to understand when you revisit the computer during your study for the mid-semester skills based assessment and final exam. You should have a good understanding of the code, the analysis, and what the meaning of the output is.
+
+You can download the data file here
+
+[ENVX1002_Data2.xlsx](./data/ENVX1002_Data2.xlsx)
+
+or 
+
+[ENVX1002_Data2.xlsx](https://canvas.sydney.edu.au/courses/55713/files/35686297?wrap=1)
+
+
 
 # Setting up your project 
 
 The first step is to 1) create a new project folder for this weeks computer lab, 2) Move the data file **ENVX1002_Data2.xlsx** into to a folder called **data** in your project folder, 3) start a new Quarto Document.
 
-# Plotting the tutorial water Quality Data - continued
+# Walk through exercise - Plotting the tutorial water Quality Data
 
 - We will start with further describing the $\text{SO}_4$ water quality data 
-- Remember the most common way to enter data into R is to import it from an external file.  Like in the tutorial, in this example we will import the data found in the worksheet called *SO4* found in the ENVX1002_Data2.xlsx file that can be downloaded from the Tutorial and Computer Lab Page on Canvas. 
+- Remember the most common way to enter data into R is to import it from an external file.
+- Like in the tutorial, in this example we will import the data found in the worksheet called *SO4* found in the ENVX1002_Data2.xlsx file that can be downloaded from the Tutorial and Computer Lab Page on Canvas. 
 - In R you can import the file as a data frame using the `read_excel` function from the **readxl** package. Note that you need to specify which worksheet you want to import. If you have not installed the readxl package you will need to run `install.packages("readxl")` but you need to only run this once. Hence, I often suggest to simply type this in the console window bottom left in R Studio and run it from there or you can put a comment # in front after you have run the code once! Note that there are other commands, such as `read.csv` and `read.table`, that can be used to read in various files types!
 
 ```{r, warning=FALSE}
@@ -67,7 +79,7 @@ p <- ggplot(water, aes(y=SO4, x="")) +
 p
 ```
 
-Check out the cheat sheets here https://www.rstudio.com/resources/cheatsheets/ for more on making plots as well as manipulating data in R!
+Check out the cheat sheets here <https://www.rstudio.com/resources/cheatsheets/> for more on making plots as well as manipulating data in R!
 
 ## Walk through Exercise - skewness
 
@@ -151,7 +163,7 @@ Is clay content more variable in the 0-30cm layer or in the 30-60cm layer?  For 
 
 # Comparing between groups.
 
-Of interest to researchers is to assess the differences in a variable between groupings of data, e.g. weight change for different diets.  In this analysis we wish to describe the difference in clay and EC between the land use or lithology classes. This will lead to more formal hypothesis testing in the later topics in ENVX1002. See https://en.wikipedia.org/wiki/Lithology for more information on Lithiology.   
+Of interest to researchers is to assess the differences in a variable between groupings of data, e.g. weight change for different diets.  In this analysis we wish to describe the difference in clay and EC between the land use or lithology classes. This will lead to more formal hypothesis testing in the later topics in ENVX1002. See <https://en.wikipedia.org/wiki/Lithology> for more information on Lithiology.   
 
 This is where the `tapply` function is useful. Note we can use the `$` followed by the column name to select the column as opposed to 
 
@@ -173,7 +185,7 @@ tapply(soil$clay0,soil$land_use,var)
 
 # Using dplyr
 
-This is a little more fancy! We can also use a package called dplyr to apply functions to different groupings of data. See https://rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf for all the operations you can do. Note you will have to install the **dplyr** package first and then load it into R Studio.
+This is a little more fancy! We can also use a package called dplyr to apply functions to different groupings of data. See <https://rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf> for all the operations you can do. Note you will have to install the **dplyr** package first and then load it into R Studio.
 
 ```{r, warning=FALSE}
 library(dplyr)
@@ -192,7 +204,7 @@ First we specify the response, `clay0`, next is the tilde, `~` which means a fun
 boxplot(clay0~land_use,data=soil)
 ```
 
-We can also use a package called ggplot to create awesome looking graphs. See https://ggplot2.tidyverse.org/ for all the graphics you can do. Note you will have to install the **ggplot2** package first and then load it into R Studio.
+We can also use a package called ggplot to create awesome looking graphs. See <https://ggplot2.tidyverse.org/> for all the graphics you can do. Note you will have to install the **ggplot2** package first and then load it into R Studio.
 
 ```{r, warning=FALSE}
 library(ggplot2)
