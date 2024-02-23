@@ -41,7 +41,7 @@ Canvas: [ENVX1002_Data2.xlsx](https://canvas.sydney.edu.au/courses/55713/files/3
 
 The first step is to 1) create a new project folder for this weeks computer lab, 2) Move the data file **ENVX1002_Data2.xlsx** into to a folder called **data** in your project folder, 3) start a new Quarto Document.
 
-# Walk through exercise - Plotting the tutorial water Quality Data
+# Walk through exercise - Plotting the $SO_4$ data
 
 - We will start with further describing the $\text{SO}_4$ water quality data 
 - Remember the most common way to enter data into R is to import it from an external file.
