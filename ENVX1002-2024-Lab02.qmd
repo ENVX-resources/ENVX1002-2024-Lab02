@@ -31,11 +31,9 @@ Make sure you document your answers and make notes so that it will be easy to un
 
 You can download the data file here
 
-[ENVX1002_Data2.xlsx](./data/ENVX1002_Data2.xlsx)
+Github: [ENVX1002_Data2.xlsx](./data/ENVX1002_Data2.xlsx)
 
-or 
-
-[ENVX1002_Data2.xlsx](https://canvas.sydney.edu.au/courses/55713/files/35686297?wrap=1)
+Canvas: [ENVX1002_Data2.xlsx](https://canvas.sydney.edu.au/courses/55713/files/35686297?wrap=1)
 
 
 
