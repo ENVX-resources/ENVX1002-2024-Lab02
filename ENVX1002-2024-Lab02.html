@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -207,7 +207,7 @@ window.Quarto = {
   <li><a href="#academic-integrity" id="toc-academic-integrity" class="nav-link active" data-scroll-target="#academic-integrity">Academic integrity</a></li>
   <li><a href="#computer-lab" id="toc-computer-lab" class="nav-link" data-scroll-target="#computer-lab">Computer lab</a></li>
   <li><a href="#setting-up-your-project" id="toc-setting-up-your-project" class="nav-link" data-scroll-target="#setting-up-your-project">Setting up your project</a></li>
-  <li><a href="#plotting-the-tutorial-water-quality-data---continued" id="toc-plotting-the-tutorial-water-quality-data---continued" class="nav-link" data-scroll-target="#plotting-the-tutorial-water-quality-data---continued">Plotting the tutorial water Quality Data - continued</a>
+  <li><a href="#walk-through-exercise---plotting-the-tutorial-water-quality-data" id="toc-walk-through-exercise---plotting-the-tutorial-water-quality-data" class="nav-link" data-scroll-target="#walk-through-exercise---plotting-the-tutorial-water-quality-data">Walk through exercise - Plotting the tutorial water Quality Data</a>
   <ul class="collapse">
   <li><a href="#walk-through-exercise---ggplot" id="toc-walk-through-exercise---ggplot" class="nav-link" data-scroll-target="#walk-through-exercise---ggplot">Walk through Exercise - ggplot</a></li>
   <li><a href="#walk-through-exercise---skewness" id="toc-walk-through-exercise---skewness" class="nav-link" data-scroll-target="#walk-through-exercise---skewness">Walk through Exercise - skewness</a></li>
@@ -271,27 +271,31 @@ Tip
 </section>
 <section id="computer-lab" class="level1">
 <h1>Computer lab</h1>
-<p>We are going to be working through a series of tasks and also complete some exercises indicated by <strong>Exercise</strong>. The best way to do this is to create a project for this week, open a <em>Quarto</em> document and work through the tasks and complete the exercises. Each time document your answers/notes so that when you revisit the prac during your study for the mid-semester skills based assessment and final exam. You should have a good understanding of the code, the analysis, and what the meaning of the output is.</p>
+<p>We are going to be working through a series of tasks and also complete some exercises indicated by <strong>Exercise</strong>. The best way to do this is to create a project for this week in your ENVX1002 folder, open a <em>Quarto</em> document and work through the tasks and complete the exercises. Make sure you document your answers and make notes so that it will be easy to understand when you revisit the computer during your study for the mid-semester skills based assessment and final exam. You should have a good understanding of the code, the analysis, and what the meaning of the output is.</p>
+<p>You can download the data file here</p>
+<p>Github: <a href="./data/ENVX1002_Data2.xlsx">ENVX1002_Data2.xlsx</a></p>
+<p>Canvas: <a href="https://canvas.sydney.edu.au/courses/55713/files/35686297?wrap=1">ENVX1002_Data2.xlsx</a></p>
 </section>
 <section id="setting-up-your-project" class="level1">
 <h1>Setting up your project</h1>
-<p>The first step is to 1) create a new project folder for this weeks computer lab, 2) Move the data file <strong>ENVX1002_Data2.xlsx</strong> into your project folder, 3) start a new Quarto Document.</p>
+<p>The first step is to 1) create a new project folder for this weeks computer lab, 2) Move the data file <strong>ENVX1002_Data2.xlsx</strong> into to a folder called <strong>data</strong> in your project folder, 3) start a new Quarto Document.</p>
 </section>
-<section id="plotting-the-tutorial-water-quality-data---continued" class="level1">
-<h1>Plotting the tutorial water Quality Data - continued</h1>
+<section id="walk-through-exercise---plotting-the-tutorial-water-quality-data" class="level1">
+<h1>Walk through exercise - Plotting the tutorial water Quality Data</h1>
 <ul>
 <li>We will start with further describing the <span class="math inline">\text{SO}_4</span> water quality data</li>
-<li>Remember the most common way to enter data into R is to import it from an external file. Like in the tutorial, in this example we will import the data found in the worksheet called <em>SO4</em> found in the ENVX1002_Data2.xlsx file that can be downloaded from the Tutorial and Computer Lab Page on Canvas.</li>
+<li>Remember the most common way to enter data into R is to import it from an external file.</li>
+<li>Like in the tutorial, in this example we will import the data found in the worksheet called <em>SO4</em> found in the ENVX1002_Data2.xlsx file that can be downloaded from the Tutorial and Computer Lab Page on Canvas.</li>
 <li>In R you can import the file as a data frame using the <code>read_excel</code> function from the <strong>readxl</strong> package. Note that you need to specify which worksheet you want to import. If you have not installed the readxl package you will need to run <code>install.packages("readxl")</code> but you need to only run this once. Hence, I often suggest to simply type this in the console window bottom left in R Studio and run it from there or you can put a comment # in front after you have run the code once! Note that there are other commands, such as <code>read.csv</code> and <code>read.table</code>, that can be used to read in various files types!</li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(readxl)</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>water<span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">"ENVX1002_Data2.xlsx"</span>, <span class="at">sheet =</span> <span class="st">"SO4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>water<span class="ot">&lt;-</span><span class="fu">read_excel</span>(<span class="st">"data/ENVX1002_Data2.xlsx"</span>, <span class="at">sheet =</span> <span class="st">"SO4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="walk-through-exercise---ggplot" class="level2">
 <h2 class="anchored" data-anchor-id="walk-through-exercise---ggplot">Walk through Exercise - ggplot</h2>
-<p>In this case, the package called <code>ggplot2</code> to make awesome looking plots, create 1) plot the raw data using a strip chart and 2) a jitter boxplot for the <code>SO4</code> dataset from the tutorial. For each graphical summary you have used, describe what you see and relate that to the data i.e.&nbsp;is it symmetrical, what are the range of values and also comment on the advantages and disadvantages of each plot for describing the <code>SO4</code> dataset?</p>
+<p>In this case, the package called <code>ggplot2</code> to make awesome looking plots, create 1) plot the raw data using a strip chart and 2) a jitter boxplot for the <code>SO4</code> data set from the tutorial. For each graphical summary you have used, describe what you see and relate that to the data i.e.&nbsp;is it symmetrical, what are the range of values and also comment on the advantages and disadvantages of each plot for describing the <code>SO4</code> data set?</p>
 <ol type="1">
 <li>Strip chart</li>
 </ol>
@@ -325,11 +329,11 @@ Tip
 </div>
 </div>
 </div>
-<p>Check out the cheat sheets here https://www.rstudio.com/resources/cheatsheets/ for more on making plots as well as manipulating data in R!</p>
+<p>Check out the cheat sheets here <a href="https://www.rstudio.com/resources/cheatsheets/" class="uri">https://www.rstudio.com/resources/cheatsheets/</a> for more on making plots as well as manipulating data in R!</p>
 </section>
 <section id="walk-through-exercise---skewness" class="level2">
 <h2 class="anchored" data-anchor-id="walk-through-exercise---skewness">Walk through Exercise - skewness</h2>
-<p>In this case, the package called <code>moments</code> contains a function for calculating skew, called <code>skewness</code>. The skewness (<span class="math inline">g_1</span>) of a dataset gives an indication of its symmetry. The sign of the skewness tells us whether the data is positively or negatively skewed. It is useful as one source of evidence for determining whether the data has a symmetrical distribution, particularly when having to assess this for many variables at once. First we must install the package using the <code>install.packages</code> function and the load it using the <code>library</code> function. Note that I have put a comment # in front as I have already installed the package and you <strong>only need to install a package once</strong>!</p>
+<p>In this case, the package called <code>moments</code> contains a function for calculating skew, called <code>skewness</code>. The skewness (<span class="math inline">g_1</span>) of a data set gives an indication of its symmetry. The sign of the skewness tells us whether the data is positively or negatively skewed. It is useful as one source of evidence for determining whether the data has a symmetrical distribution, particularly when having to assess this for many variables at once. First we must install the package using the <code>install.packages</code> function and the load it using the <code>library</code> function. Note that I have put a comment # in front as I have already installed the package and you <strong>only need to install a package once</strong>!</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("moments")</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(moments)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -360,8 +364,8 @@ Tip
 <li>differences between different depths;</li>
 <li>differences between the 2 soil properties; clay and EC.</li>
 </ul>
-<p>We are also interested in describing the dataset in terms of the lithology and land use found at each of the sites.</p>
-<p>The data is in the worksheet called <em>soil</em> found in the ENVX1002_Data2.xlsx file that can be found in the Tutorial and Computer lab page in Canvas. Download the file and save into your data folder in your project folder and then load the dataset into R. Remember you need to have installed and loaded the <strong>readxl</strong> package to do this which we did earlier</p>
+<p>We are also interested in describing the data set in terms of the lithology and land use found at each of the sites.</p>
+<p>The data is in the worksheet called <em>soil</em> found in the ENVX1002_Data2.xlsx file that can be found in the Tutorial and Computer lab page in Canvas. Download the file and save into your data folder in your project folder and then load the data set into R. Remember you need to have installed and loaded the <strong>readxl</strong> package to do this which we did earlier</p>
 <div class="cell">
 
 </div>
@@ -422,7 +426,7 @@ Cropping  Grazing  Natural
 </section>
 <section id="comparing-between-groups." class="level1">
 <h1>Comparing between groups.</h1>
-<p>Of interest to researchers is to assess the differences in a variable between groupings of data, e.g.&nbsp;weight change for different diets. In this analysis we wish to describe the difference in clay and EC between the land use or lithology classes. This will lead to more formal hypothesis testing in the later topics in ENVX1002. See https://en.wikipedia.org/wiki/Lithology for more information on Lithiology.</p>
+<p>Of interest to researchers is to assess the differences in a variable between groupings of data, e.g.&nbsp;weight change for different diets. In this analysis we wish to describe the difference in clay and EC between the land use or lithology classes. This will lead to more formal hypothesis testing in the later topics in ENVX1002. See <a href="https://en.wikipedia.org/wiki/Lithology" class="uri">https://en.wikipedia.org/wiki/Lithology</a> for more information on Lithiology.</p>
 <p>This is where the <code>tapply</code> function is useful. Note we can use the <code>$</code> followed by the column name to select the column as opposed to</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tapply</span>(soil<span class="sc">$</span>clay0,soil<span class="sc">$</span>land_use,mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -448,7 +452,7 @@ Cropping  Grazing  Natural
 </section>
 <section id="using-dplyr" class="level1">
 <h1>Using dplyr</h1>
-<p>This is a little more fancy! We can also use a package called dplyr to apply functions to different groupings of data. See https://rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf for all the operations you can do. Note you will have to install the <strong>dplyr</strong> package first and then load it into R Studio.</p>
+<p>This is a little more fancy! We can also use a package called dplyr to apply functions to different groupings of data. See <a href="https://rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf" class="uri">https://rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf</a> for all the operations you can do. Note you will have to install the <strong>dplyr</strong> package first and then load it into R Studio.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -492,7 +496,7 @@ Attaching package: 'dplyr'</code></pre>
 </div>
 </div>
 </div>
-<p>We can also use a package called ggplot to create awesome looking graphs. See https://ggplot2.tidyverse.org/ for all the graphics you can do. Note you will have to install the <strong>ggplot2</strong> package first and then load it into R Studio.</p>
+<p>We can also use a package called ggplot to create awesome looking graphs. See <a href="https://ggplot2.tidyverse.org/" class="uri">https://ggplot2.tidyverse.org/</a> for all the graphics you can do. Note you will have to install the <strong>ggplot2</strong> package first and then load it into R Studio.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>p_spoil <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(soil, <span class="fu">aes</span>(<span class="at">y =</span> clay0, <span class="at">x =</span> land_use, <span class="at">fill =</span> land_use))</span>
