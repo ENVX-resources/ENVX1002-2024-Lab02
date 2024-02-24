@@ -141,7 +141,9 @@ plot(as.factor(soil$land_use),xlab="Land Use",ylab="Frequency")
 
 **Lithology**
 
-What is the most commonly sampled lithology?
+What is the most commonly sampled lithology? 
+
+Hint: use the `table` function to find out the frequency of each lithology.  You could also create a bar plot of the lithology data (see land-use example above).
 
 # Numerical data
 
@@ -153,11 +155,19 @@ summary(soil[,2:5])
 
 ## Exercise 2
 
-For each of the clay and EC properties (at all depths), give the most appropriate estimate of centre and variation.  Are there any unusual observations? Justify your answers.
+For each of the clay and EC properties (at all depths), 
+
+i) Give the most appropriate estimate of centre.
+ii) Is the data symmetrical?
+iii) Are there any unusual observations? Justify your answers. 
+
+Hint: use the `summary` values from above, use the `skewness` function from the `moments` package and also use `hist` and `boxplot` function to look for unusual observations and skewness.
 
 ## Exercise 3
 
 Is clay content more variable in the 0-30cm layer or in the 30-60cm layer?  For the 0-30cm layer is clay or EC the most variable property. Justify your answers. 
+
+Hint: you may calculate the `sd` and/or `var` and/or `IQR` and/or the coefficient of variation (CV) for each property.
 
 # Comparing between groups.
 
@@ -202,7 +212,7 @@ First we specify the response, `clay0`, next is the tilde, `~` which means a fun
 boxplot(clay0~land_use,data=soil)
 ```
 
-We can also use a package called ggplot to create awesome looking graphs. See <https://ggplot2.tidyverse.org/> for all the graphics you can do. Note you will have to install the **ggplot2** package first and then load it into R Studio.
+We can also use a package called `ggplot2` to create awesome looking graphs. See <https://ggplot2.tidyverse.org/> for all the graphics you can do. Note you will have to install the **ggplot2** package first and then load it into R Studio.
 
 ```{r, warning=FALSE}
 library(ggplot2)
