@@ -397,6 +397,7 @@ Cropping  Grazing  Natural
 <h2 class="anchored" data-anchor-id="exercise-1">Exercise 1</h2>
 <p><strong>Lithology</strong></p>
 <p>What is the most commonly sampled lithology?</p>
+<p>Hint: use the <code>table</code> function to find out the frequency of each lithology. You could also create a bar plot of the lithology data (see land-use example above).</p>
 </section>
 </section>
 <section id="numerical-data" class="level1">
@@ -417,11 +418,18 @@ Cropping  Grazing  Natural
 </div>
 <section id="exercise-2" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-2">Exercise 2</h2>
-<p>For each of the clay and EC properties (at all depths), give the most appropriate estimate of centre and variation. Are there any unusual observations? Justify your answers.</p>
+<p>For each of the clay and EC properties (at all depths),</p>
+<ol type="i">
+<li>Give the most appropriate estimate of centre.</li>
+<li>Is the data symmetrical?</li>
+<li>Are there any unusual observations? Justify your answers.</li>
+</ol>
+<p>Hint: use the <code>summary</code> values from above, use the <code>skewness</code> function from the <code>moments</code> package and also use <code>hist</code> and <code>boxplot</code> function to look for unusual observations and skewness.</p>
 </section>
 <section id="exercise-3" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-3">Exercise 3</h2>
 <p>Is clay content more variable in the 0-30cm layer or in the 30-60cm layer? For the 0-30cm layer is clay or EC the most variable property. Justify your answers.</p>
+<p>Hint: you may calculate the <code>sd</code> and/or <code>var</code> and/or <code>IQR</code> and/or the coefficient of variation (CV) for each property.</p>
 </section>
 </section>
 <section id="comparing-between-groups." class="level1">
@@ -496,7 +504,7 @@ Attaching package: 'dplyr'</code></pre>
 </div>
 </div>
 </div>
-<p>We can also use a package called ggplot to create awesome looking graphs. See <a href="https://ggplot2.tidyverse.org/" class="uri">https://ggplot2.tidyverse.org/</a> for all the graphics you can do. Note you will have to install the <strong>ggplot2</strong> package first and then load it into R Studio.</p>
+<p>We can also use a package called <code>ggplot2</code> to create awesome looking graphs. See <a href="https://ggplot2.tidyverse.org/" class="uri">https://ggplot2.tidyverse.org/</a> for all the graphics you can do. Note you will have to install the <strong>ggplot2</strong> package first and then load it into R Studio.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>p_spoil <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(soil, <span class="fu">aes</span>(<span class="at">y =</span> clay0, <span class="at">x =</span> land_use, <span class="at">fill =</span> land_use))</span>

@@ -25,21 +25,21 @@
     "href": "ENVX1002-2024-Lab02.html#exercise-1",
     "title": "Lab 02",
     "section": "Exercise 1",
-    "text": "Exercise 1\nLithology\nWhat is the most commonly sampled lithology?"
+    "text": "Exercise 1\nLithology\nWhat is the most commonly sampled lithology?\nHint: use the table function to find out the frequency of each lithology. You could also create a bar plot of the lithology data (see land-use example above)."
   },
   {
     "objectID": "ENVX1002-2024-Lab02.html#exercise-2",
     "href": "ENVX1002-2024-Lab02.html#exercise-2",
     "title": "Lab 02",
     "section": "Exercise 2",
-    "text": "Exercise 2\nFor each of the clay and EC properties (at all depths), give the most appropriate estimate of centre and variation. Are there any unusual observations? Justify your answers."
+    "text": "Exercise 2\nFor each of the clay and EC properties (at all depths),\n\nGive the most appropriate estimate of centre.\nIs the data symmetrical?\nAre there any unusual observations? Justify your answers.\n\nHint: use the summary values from above, use the skewness function from the moments package and also use hist and boxplot function to look for unusual observations and skewness."
   },
   {
     "objectID": "ENVX1002-2024-Lab02.html#exercise-3",
     "href": "ENVX1002-2024-Lab02.html#exercise-3",
     "title": "Lab 02",
     "section": "Exercise 3",
-    "text": "Exercise 3\nIs clay content more variable in the 0-30cm layer or in the 30-60cm layer? For the 0-30cm layer is clay or EC the most variable property. Justify your answers."
+    "text": "Exercise 3\nIs clay content more variable in the 0-30cm layer or in the 30-60cm layer? For the 0-30cm layer is clay or EC the most variable property. Justify your answers.\nHint: you may calculate the sd and/or var and/or IQR and/or the coefficient of variation (CV) for each property."
   },
   {
     "objectID": "ENVX1002-2024-Lab02.html#exercise-4",
